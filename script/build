@@ -5,6 +5,8 @@ import { readFile, writeFile } from 'node:fs/promises';
 const jsSource = await readFile('extension.js', 'utf8');
 const { component } = await componentize(jsSource, {
   witPath: "./wit",
-  worldName: "extension"
+  worldName: "extension",
+  enableAot: false,
+  disableFeatures: ['stdio', 'random', 'clocks', 'http'],
 });
 await writeFile('extension.wasm', component);

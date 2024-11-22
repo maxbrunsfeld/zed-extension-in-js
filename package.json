@@ -10,6 +10,6 @@
     "build": "script/build"
   },
   "dependencies": {
-    "@bytecodealliance/componentize-js": "^0.14.0"
+    "@bytecodealliance/componentize-js": "^0.15.0"
   }
 }
